@@ -1,0 +1,114 @@
+$primary: #667eea
+$onPrimary: #fff
+$secondary: #764ba2
+$onSecondary: #fff
+$background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+$onBackground: #333
+$surface: #fff
+$onSurface: #222
+
+@mixin card()
+    background: $surface
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1)
+
+*
+    box-sizing: border-box
+
+button
+    border-radius: 0.5rem
+    border: none
+    outline: none
+    font-weight: 700
+    box-shadow: 0 1px 3px transparentize($primary, 1)
+    padding: 0.75rem 2rem
+    background: $primary
+    color: $onPrimary
+    text-transform: uppercase
+    transition: 0.3s background-color ease, 0.3s box-shadow ease
+    &:hover
+        background: darken($primary, 5%)
+        box-shadow: 0 2px 6px transparentize($primary, 0.75)
+    &:active
+        background: darken($primary, 10%)
+        box-shadow: 0 0 0 #fff
+
+body
+    min-height: 100vh
+    background: $background
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    cursor: default
+    margin: 0
+    padding: 1rem
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $onBackground
+    user-select: none
+    main
+        @include card()
+        border-radius: 2rem
+        display: flex
+        flex-direction: column
+        header
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 2rem
+            padding-bottom: 1rem
+            nav
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding-bottom: 1rem
+                h1
+                    flex: 1
+                    font-size: 2.75rem
+                    line-height: 1em
+                    margin: 0
+                    margin-bottom: 1rem
+            #turn-switch
+                display: flex
+                flex-direction: row
+                align-items: center
+                border-radius: 0.75rem
+                background-color: #dddddd  
+                div 
+                    padding: 0.75rem 2rem
+                    line-height: 1em
+                    color: $onSurface
+                    border-radius: 0.75rem
+                    font-weight: 700
+                    transition: 0.3s color ease, 0.3s background ease
+                #player-x-indicator.turn
+                    box-shadow: 0 0 6px transparentize(#2979ff, 0.5)
+                    background-color: #2979ff
+                    color: $onPrimary
+                #player-o-indicator.turn
+                    box-shadow: 0 0 6px transparentize(#ff1744, 0.5)
+                    background-color: #ff1744
+                    color: $onPrimary       
+        #gamearea
+            padding: 1rem
+            svg
+                width: 75vw
+                max-width: 600px
+            text.game-message
+                font-size: 4rem
+                color: $onSurface
+                    
+@media (orientation: landscape) and (min-width: 786px)
+    body
+        padding: 2rem
+        main
+            flex-direction: row-reverse
+            header
+                padding-bottom: 2rem
+                padding-left: 1rem
+                align-items: flex-start
+                nav
+                    flex-direction: column
+                    align-items: flex-start
+            #gamearea
+                svg
+                    width: 75vh
+                    

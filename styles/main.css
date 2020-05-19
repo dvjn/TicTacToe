@@ -1,0 +1,194 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  -webkit-box-shadow: 0 1px 3px rgba(102, 126, 234, 0);
+          box-shadow: 0 1px 3px rgba(102, 126, 234, 0);
+  padding: 0.75rem 2rem;
+  background: #667eea;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s background-color ease, 0.3s -webkit-box-shadow ease;
+  transition: 0.3s background-color ease, 0.3s -webkit-box-shadow ease;
+  transition: 0.3s background-color ease, 0.3s box-shadow ease;
+  transition: 0.3s background-color ease, 0.3s box-shadow ease, 0.3s -webkit-box-shadow ease;
+}
+
+button:hover {
+  background: #506be7;
+  -webkit-box-shadow: 0 2px 6px rgba(102, 126, 234, 0.25);
+          box-shadow: 0 2px 6px rgba(102, 126, 234, 0.25);
+}
+
+button:active {
+  background: #3958e4;
+  -webkit-box-shadow: 0 0 0 #fff;
+          box-shadow: 0 0 0 #fff;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: default;
+  margin: 0;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body main {
+  background: #fff;
+  -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+          box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+body main header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+body main header nav h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2.75rem;
+  line-height: 1em;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+body main header #turn-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.75rem;
+  background-color: #dddddd;
+}
+
+body main header #turn-switch div {
+  padding: 0.75rem 2rem;
+  line-height: 1em;
+  color: #222;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  -webkit-transition: 0.3s color ease, 0.3s background ease;
+  transition: 0.3s color ease, 0.3s background ease;
+}
+
+body main header #turn-switch #player-x-indicator.turn {
+  -webkit-box-shadow: 0 0 6px rgba(41, 121, 255, 0.5);
+          box-shadow: 0 0 6px rgba(41, 121, 255, 0.5);
+  background-color: #2979ff;
+  color: #fff;
+}
+
+body main header #turn-switch #player-o-indicator.turn {
+  -webkit-box-shadow: 0 0 6px rgba(255, 23, 68, 0.5);
+          box-shadow: 0 0 6px rgba(255, 23, 68, 0.5);
+  background-color: #ff1744;
+  color: #fff;
+}
+
+body main #gamearea {
+  padding: 1rem;
+}
+
+body main #gamearea svg {
+  width: 75vw;
+  max-width: 600px;
+}
+
+body main #gamearea text.game-message {
+  font-size: 4rem;
+  color: #222;
+}
+
+@media (orientation: landscape) and (min-width: 786px) {
+  body {
+    padding: 2rem;
+  }
+  body main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  body main header {
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body main header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body main #gamearea svg {
+    width: 75vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */
