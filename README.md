@@ -4,7 +4,7 @@ A simple implementation of Tic Tac Toe game with beautiful UI.
 
 ## Demo
 
-[https://divykj.github.io/TicTacToe/](https://divykj.github.io/TicTacToe/)
+[https://dvjn.github.io/TicTacToe/](https://dvjn.github.io/TicTacToe/)
 
 ## Implementation
 
